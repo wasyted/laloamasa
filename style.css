@@ -1,0 +1,174 @@
+*{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header{
+  padding: 8px 12px 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > div{
+  display: flex;
+}
+
+header > div > ul{
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+body{
+  font-family: 'Andika';
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}
+
+.header-logo{
+  max-height: 40px;
+}
+
+.cart{
+  height: 30px;
+  filter: invert();
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.info{
+  padding: 30px;
+}
+
+.info > ul{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sub-item{
+  padding-left: 10px;
+}
+
+.title{
+  font-family: 'Sacramento';
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.sub-title{
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.home p{
+  font-size: 1.5rem;
+}
+
+.banner{
+  height: 200px;
+  overflow: hidden;
+}
+
+.banner img{
+  transform: translateY(-50px);
+}
+
+.menu{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu > h1{
+  align-self: end;
+}
+
+.menu-grid{
+  padding: 10px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.menu-item{
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.dark-background{
+  background-color: #66431d;
+  color: #ffffff;
+}
+
+.brown-background{
+  background-color: #a3846a;
+  color: #ffffff;
+}
+
+.bottom-dock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+}
+
+.bottom-dock button{
+  font-family: 'Rubik';
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.margin-top-bottom-10{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.centered{
+  text-align: center;
+}
