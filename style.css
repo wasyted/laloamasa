@@ -18,11 +18,22 @@ a{
   text-decoration: none;
 }
 
+ul > li > a{
+  font-size: 0.8rem;
+}
+
 header{
   padding: 8px 12px 8px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 101;
+  position: fixed;
+  background-color: #121212;
+  transition: background-color 0.3s ease-in-out;
 }
 
 header > div{
@@ -66,13 +77,33 @@ button{
   flex-direction: column;
 }
 
+.banner-container{
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.banner-container > img{
+  width: 100%;
+  height: auto;
+  transform: translateY(-70px);
+  position: fixed;
+  z-index: -10;
+}
+
 .home{
+  background-color: #ffffff;
   padding: 30px;
+  padding-top: 10px;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-direction: column;
-  max-width: 600px;
+  margin: 0;
+}
+
+.home > img{
+  align-self: center;
 }
 
 .info{
@@ -90,7 +121,7 @@ button{
 .title{
   font-family: 'Sacramento';
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .sub-title{
@@ -99,12 +130,8 @@ button{
 }
 
 .home p{
-  font-size: 1.5rem;
-}
-
-.banner{
-  height: 200px;
-  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .banner img{
@@ -112,15 +139,12 @@ button{
 }
 
 .menu{
+  background-color: #ffffff;
   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.menu > h1{
-  align-self: end;
 }
 
 .menu-grid{
@@ -158,16 +182,17 @@ button{
 }
 
 .dark-background{
-  background-color: #66431d;
+  background-color: #121212af;
   color: #ffffff;
 }
 
 .brown-background{
-  background-color: #a3846a;
-  color: #ffffff;
+  background-color:#ffffff; 
+  color: #121212;
 }
 
 .bottom-dock{
+  background-color: #121212;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,6 +207,7 @@ button{
 .bottom-dock button{
   font-family: 'Rubik';
   color: #ffffff;
+  background-color: #121212;
   font-size: 1.5rem;
 }
 
@@ -196,4 +222,8 @@ button{
 
 div.hidden{
   display: none;
+}
+
+.solid{
+  background-color: #121212;
 }

@@ -1,17 +1,17 @@
 function displayHeader() {
   // Create the header element
-  const headerElement = document.createElement('header');
+  var headerElement = document.createElement('header');
   headerElement.classList.add('dark-background');
 
   // Create the div element
   const divElement = document.createElement('div');
 
   // Create the img element for the header logo
-  const logoImgElement = document.createElement('img');
-  logoImgElement.classList.add('header-logo');
-  logoImgElement.src = './resources/logo.png';
-  logoImgElement.alt = 'laloamasa';
-  divElement.appendChild(logoImgElement);
+  // const logoImgElement = document.createElement('img');
+  // logoImgElement.classList.add('header-logo');
+  // logoImgElement.src = './resources/logo.png';
+  // logoImgElement.alt = 'laloamasa';
+  // divElement.appendChild(logoImgElement);
 
   // Create the ul element for the navigation menu
   const ulElement = document.createElement('ul');
@@ -42,6 +42,7 @@ function displayHeader() {
 
   // Insert the header element into the DOM
   document.body.appendChild(headerElement);
-}
-
+  }
 displayHeader();
+
+

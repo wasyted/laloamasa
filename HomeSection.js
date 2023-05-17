@@ -1,4 +1,5 @@
 function displayHomeSection(){
+  
   // Create the div element
   const divElement = document.createElement('div');
   divElement.id = 'home';
@@ -14,6 +15,8 @@ function displayHomeSection(){
   const pElement = document.createElement('p');
   pElement.textContent = 'Soy Lore, amaso en casa con mucho cariño panes y budines convencionales, sin gluten y veganos! todo es mas rico hecho con amor. Bienvenidos! 👩🏼‍🍳❤️';
   divElement.appendChild(pElement);
+
+
 
   // Insert the div element into the DOM
   document.body.appendChild(divElement);

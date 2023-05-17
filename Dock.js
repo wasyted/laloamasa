@@ -1,7 +1,7 @@
 function displayDock(){
   // Create the div element
   const divElement = document.createElement('div');
-  divElement.classList.add('bottom-dock', 'dark-background');
+  divElement.classList.add('bottom-dock');
 
   // Create the button element
   const buttonElement = document.createElement('button');
