@@ -1,0 +1,36 @@
+.searchBar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #ededed;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.searchBar > p{
+  padding: 5px;
+  padding-right: 10px;
+  background: #ededed;
+  color: #151515;
+  font-weight: bold;
+}
+
+.searchButton{
+  background: url(src/assets/navigate_next_FILL0_wght400_GRAD0_opsz24.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: var(--lighter);
+  height: 25px;
+  width: 35px;
+}
+
+.searchBox{
+  width: 100%;
+  padding: 5px;
+  border: none;
+}

@@ -1,0 +1,45 @@
+:root{
+  --darker: #37150B;
+  --dark: #734136;
+  --medium: #A6756A;
+  --light: #dfdfdf;
+  --lighter: #e3d7d5;
+  --gray: #ededed;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Josefin Sans';
+}
+
+p{
+  font-family: 'Josefin Sans';
+  max-width: 65ch;
+}
+
+.dark-font{
+  color: #151515;
+}
+
+.categoriesResponsive{
+  margin: auto;
+  max-width: 800px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+}

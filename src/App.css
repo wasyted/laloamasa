@@ -1,0 +1,14 @@
+.categoriesResposive{
+  position: relative;
+}
+
+@media (min-width: 768px){
+  .categoriesResponsive{
+    margin: auto;
+    max-width: 800px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+  }
+}

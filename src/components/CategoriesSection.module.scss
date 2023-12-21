@@ -1,0 +1,35 @@
+.categoryContainer{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.categoriesHeader{
+  font-family: 'Josefin Sans';
+  padding-top: 20px;
+  padding-left: 10px;
+  color: #151515;
+  font-size: 20px;
+  align-self: start;
+}
+
+.categoryCard{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Josefin Sans';
+  padding: 5px;
+  text-align: center;
+}
+
+.categoryCard > img{
+  max-width: 50%;
+  filter: opacity(90%);
+}
