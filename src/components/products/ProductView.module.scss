@@ -1,0 +1,40 @@
+.productView{
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.productView button{
+  margin-top: 10px;
+  font-family: 'Josefin Sans';
+  padding: 6px;
+  background-color: #151515;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+.infoContainer{
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  justify-content: start;
+}
+
+.buyContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buyContainer > button{
+  min-width: 25px;
+  margin: 0;
+}
+
+.buyContainer > input{
+  max-width: 50px;
+}

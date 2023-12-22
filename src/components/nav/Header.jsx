@@ -1,14 +1,12 @@
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styles from './Header.module.scss';
+import Nav from './Nav'
 
 export default function Header(){
   return(
     <div>
-      <nav className={styles.navContainer}>
-        <h1 className={styles.logo}>laloamasa</h1>
-        <button className={styles.cartButton}></button>
-      </nav>
+      <Nav />
       <Carousel 
         autoPlay={true} 
         infiniteLoop={true} 

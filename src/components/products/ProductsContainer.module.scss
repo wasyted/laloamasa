@@ -23,12 +23,21 @@
   width: 100%;
 }
 
+.productContainer > p{
+  padding-top: 10px;
+}
+
+.price{
+  font-weight: bold;
+}
+
 .productContainer > img{
   max-width: 100%;
   min-height: 140px;
+  border-radius: 5px;
 }
 
-.productContainer > button{
+.productContainer button{
   margin-top: 10px;
   font-family: 'Josefin Sans';
   padding: 6px;

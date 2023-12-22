@@ -8,7 +8,7 @@ nav{
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -25,7 +25,7 @@ nav{
 }
 
 .cartButton{
-  background: url('src/assets/local_mall_FILL0_wght400_GRAD0_opsz24.svg');
+  background: url('../src/assets/local_mall_FILL0_wght400_GRAD0_opsz24.svg');
   background-size: cover;
   height: 25px;
   width: 25px;
