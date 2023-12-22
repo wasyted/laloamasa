@@ -1,4 +1,5 @@
 import ProductView from './products/ProductView';
+import RecommendedContainer from './products/RecommendedContainer';
 import Nav from './nav/Nav';
 import { useEffect , useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -20,12 +21,13 @@ export default function Product(){
 
   useEffect(() => {
     fetchProduct();
-  }, []);
+  }, [urlParams.id]);
 
   return (
     <>
       <Nav />
       {product && <ProductView id={product.id} name={product.name} price={product.price} description={product.description} image={product.image} category={product.category}/>}
+      {products && <RecommendedContainer products={products}/>}
     </>
   )
 }

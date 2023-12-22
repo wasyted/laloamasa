@@ -1,4 +1,4 @@
-import styles from './ProductView.module.scss'
+import styles from '../styles/ProductView.module.scss'
 
 export default function ProductView(props){
   return(

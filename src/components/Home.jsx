@@ -1,4 +1,5 @@
 import { useState , useEffect } from 'react';
+import Nav from './nav/Nav';
 import Header from './nav/Header';
 import SearchBar from './inputs/SearchBar';
 import CategoriesSection from './categories/CategoriesSection';
@@ -13,8 +14,8 @@ export default function Home(){
   const fetchProducts = async () => {
     try{
       const response = await fetch("https://raw.githubusercontent.com/wasyted/laloamasajson/main/products.json");
-      const productsList = await response.json();
-      setProducts(productsList);
+      const data = await response.json();
+      setProducts(data.products);
     } catch{
       if(error){
         console.log(error)
@@ -29,6 +30,7 @@ export default function Home(){
   return (
     <>
       <div style={{backgroundColor: 'var(--gray)'}}>
+        <Nav />
         <Header />
         <SearchBar />
         <div style={{margin: 'auto', maxWidth: '1280px'}}>

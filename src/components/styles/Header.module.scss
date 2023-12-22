@@ -36,7 +36,8 @@ nav{
 }
 
 .header{
-  max-height: 250px;
+  min-height: max-content;
+  max-height: 200px;
   position: relative;
   top: 0;
 }

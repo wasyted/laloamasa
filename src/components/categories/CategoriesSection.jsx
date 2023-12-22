@@ -1,5 +1,5 @@
 import Flicking from "@egjs/react-flicking";
-import styles from './CategoriesSection.module.scss';
+import styles from '../styles/CategoriesSection.module.scss';
 import "@egjs/react-flicking/dist/flicking.css";
 export default function CategoriesSection(){
   return(

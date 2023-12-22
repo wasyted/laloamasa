@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-import styles from './ProductsContainer.module.scss';
+import styles from '../styles/ProductsContainer.module.scss';
 import { Link } from 'react-router-dom';
 export default function ProductsContainer(props){
   const [productsList , setProductsList] = useState();
   useEffect(() =>{
     setProductsList(props.products)
-  }
-  );
+  });
   return(
     <div>
       <h1 className={styles.productsContainerHeader}>Productos / Todos</h1>
