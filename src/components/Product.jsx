@@ -11,7 +11,7 @@ export default function Product(){
   const urlParams = useParams();
   const [ products , setProducts ] = useState();
   const [ product , setProduct ] = useState();
-
+  
   const fetchProduct = async () => {
     const response = await fetch("https://raw.githubusercontent.com/wasyted/laloamasajson/main/products.json");
     const data = await response.json();
@@ -22,11 +22,21 @@ export default function Product(){
   useEffect(() => {
     fetchProduct();
   }, [urlParams.id]);
+  
+  function addItemToCart(product){
+    const newCart = JSON.parse(localStorage.getItem("Cart"));
+    newCart.cartList.push(product)
+    localStorage.setItem("Cart", JSON.stringify(newCart))
+  }
 
+  function handleClick(){
+    addItemToCart(product);
+  }
+  
   return (
     <>
       <Nav />
-      {product && <ProductView id={product.id} name={product.name} price={product.price} description={product.description} image={product.image} category={product.category}/>}
+      {product && <ProductView id={product.id} name={product.name} price={product.price} description={product.description} image={product.image} category={product.category} handleClick={handleClick} />}
       {products && <RecommendedContainer products={products}/>}
     </>
   )

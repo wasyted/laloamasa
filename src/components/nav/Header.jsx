@@ -1,5 +1,5 @@
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from '../styles/Header.module.scss';
 
 export default function Header(){
@@ -17,10 +17,10 @@ export default function Header(){
 
         <div className={styles.header}>
           <div className={styles.carouselOverlay}>
-            <h1>Estoy amasando con amor</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo perspiciatis neque sit, corrupti optio dolorem maiores explicabo totam porro veniam nihil enim consequatur soluta voluptatum officiis omnis ullam? Saepe, nam?
+              Soy Lore
             </p>
+            <h1>Estoy amasando con amor</h1>
           </div>
           <img src="src/assets/pexels-life-of-pix-9095.jpg" />
         </div>

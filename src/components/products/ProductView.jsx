@@ -1,6 +1,7 @@
 import styles from '../styles/ProductView.module.scss'
 
 export default function ProductView(props){
+
   return(
     <div className={styles.productView}>
       <h1>{props.name}</h1>
@@ -13,7 +14,7 @@ export default function ProductView(props){
           <button>-</button>
           <div>0</div>
           <button>+</button>
-          <button>Agregar al carrito</button>
+          <button onClick={props.handleClick}>Agregar al carrito</button>
         </div>
     </div>
   )
