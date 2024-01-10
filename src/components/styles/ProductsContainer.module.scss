@@ -41,12 +41,21 @@
   margin-top: 10px;
   font-family: 'Josefin Sans';
   padding: 6px;
-  background-color: #151515;
+  background-color: #cab68d;
   color: #fff;
   border: none;
   border-radius: 3px;
 }
 
+.loadMoreButton{
+  margin-top: 10px;
+  font-family: 'Josefin Sans';
+  padding: 6px;
+  background-color: #151515;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
 
 @media (min-width: 768px){
   .productsContainer{

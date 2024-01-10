@@ -25,11 +25,12 @@ export default function RecommendedContainer(props){
       <div className={styles.productsContainer}>
         {recommendedProducts && recommendedProducts.map((product) => {
           return (
-            <div key={uuidv4()} className={styles.productContainer}>
-              <img src={product.image} alt="foto producto" />
-              <p>{product.name} <span className={styles.price}>${product.price}</span></p>
-              <Link to={`/product/${product.id}`}><button>ver producto</button></Link>
-            </div>
+            <Link to={`/product/${product.id}`}>
+              <div key={uuidv4()} className={styles.productContainer}>
+                <img src={product.image} alt="foto producto" />
+                <p>{product.name} <span className={styles.price}>${product.price}</span></p>
+              </div>
+            </Link>
           )
         })}
       </div>
