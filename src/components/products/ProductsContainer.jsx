@@ -8,18 +8,21 @@ export default function ProductsContainer(props){
   });
   return(
     <div>
-      <h1 className={styles.productsContainerHeader}>Productos / Todos</h1>
+
+      <div>
+      {(props.products === null) ? <h1 className={styles.productsContainerHeader}>Cargando productos...</h1> : <h1 className={styles.productsContainerHeader}>Productos / Todos</h1>} 
       <div className={styles.productsContainer}>
-        {productsList && productsList.map((product) => {
-          return (
-            <div key={product.id} className={styles.productContainer}>
-              <img src={product.image} alt="foto producto" />
-              <p>{product.name} <span className={styles.price}>${product.price}</span></p>
-              <Link to={`/product/${product.id}`}><button>ver producto</button></Link>
-            </div>
+      {productsList && productsList.map((product) => {
+        return (
+          <div key={product.id} className={styles.productContainer}>
+          <img src={product.image} alt="foto producto" />
+          <p>{product.name} <span className={styles.price}>${product.price}</span></p>
+          <Link to={`/product/${product.id}`}><button>ver producto</button></Link>
+          </div>
           )
         })}
-      </div>
+        </div>
+        </div>
     </div>
   )
 }

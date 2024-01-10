@@ -22,19 +22,19 @@ export default function Header(){
             </p>
             <h1>Estoy amasando con amor</h1>
           </div>
-          <img src="src/assets/pexels-life-of-pix-9095.jpg" />
+          <img src="https://i.ibb.co/bmckCYR/pexels-life-of-pix-9095.jpg" />
         </div>
         <div className={styles.header}>
           <div className={styles.carouselOverlay}>
             <h1>¿Ya probaste el budín de chocolate?</h1>
           </div>
-          <img src="src/assets/pexels-lucie-liz-3256809.jpg" />
+          <img src="https://i.ibb.co/C5jp1HH/pexels-lucie-liz-3256809.jpg" />
         </div>
         <div className={styles.header}>
           <div className={styles.carouselOverlay}>
             <h1>Hacemos envíos, ¡Consultá disponibilidad!</h1>
           </div>
-          <img src="src/assets/pexels-jéshoots-230743.jpg" />
+          <img src="https://i.ibb.co/PGjf2S2/pexels-j-shoots-230743.jpg" />
         </div>
       </Carousel>
     </div>
