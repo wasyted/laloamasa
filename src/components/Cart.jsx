@@ -18,8 +18,6 @@ export default function Cart() {
   function showNotificationWithMessage(message) {
     setNotificationMessage(message);
     setShowNotification(true);
-
-    // Automatically hide the notification after 3 seconds
     setTimeout(() => {
       setShowNotification(false);
       setNotificationMessage('');
@@ -30,7 +28,6 @@ export default function Cart() {
     const cart = JSON.parse(localStorage.getItem("Cart")) || { cartList: [] };
     setCartProducts(cart.cartList);
 
-    // Calculate subtotal and total
     const newSubtotal = cart.cartList.reduce((acc, product) => {
       return acc + product.price * product.amount;
     }, 0);
@@ -38,6 +35,38 @@ export default function Cart() {
 
     const newTotal = newSubtotal + shipping;
     setTotal(newTotal);
+  }
+
+  function removeOneItemFromCart(productToDelete) {
+    const cart = JSON.parse(localStorage.getItem("Cart"));
+    for (let i = 0; i < cart.cartList.length; i++) {
+      if (cart.cartList[i].id === productToDelete.id) {
+        if (cart.cartList[i].amount > 1) {
+          // If there is more than 1 item, decrement the amount
+          cart.cartList[i].amount -= 1;
+        } else {
+          // If there is only 1 item, remove the entire product
+          cart.cartList.splice(i, 1);
+        }
+        localStorage.setItem("Cart", JSON.stringify(cart));
+        updateCart();
+        showNotificationWithMessage(`Sacaste 1 ${productToDelete.name} del carrito`);
+        return;
+      }
+    }
+  }
+
+  function addItemToCart(productToDelete) {
+    const cart = JSON.parse(localStorage.getItem("Cart"));
+    for (let i = 0; i < cart.cartList.length; i++) {
+      if (cart.cartList[i].id === productToDelete.id) {
+          cart.cartList[i].amount += 1;
+        localStorage.setItem("Cart", JSON.stringify(cart));
+        updateCart();
+        showNotificationWithMessage(`Agregaste 1 ${productToDelete.name} al carrito`);
+        return;
+      }
+    }
   }
 
   function removeItemFromCart(productToDelete) {
@@ -95,21 +124,27 @@ export default function Cart() {
             <ul>
               {cartProducts.map((product) => (
                 <li key={uuidv4()}>
-                <div className="product-image">
+                {/* <div className="product-image">
                   <img src={product.image} alt="" />
-                </div>
-                <div style={{display: 'flex' , justifyContent: 'space-between', alignItems: 'center',width: '100%'}}>
-                  <div style={{paddingRight: '10px', display: 'flex', flexDirection: 'column', gap: '10px', justifySelf: 'start'}}>
-                    <div style={{display: 'flex', gap: '10px'}}>
-                      <p style={{fontWeight: 'bold'}}>{product.name}</p>
-                      <p style={{fontWeight: 'bold'}}>${product.price * product.amount}</p>
-                    </div>
-                    <div style={{display: 'flex', gap: '10px'}}>
-                      <p style={{fontSize: '12px', color: "#656565"}}>{product.description}</p>
-                      <p style={{fontSize: '12px'}}>{product.amount} {(product.amount > 1) ? 'unidades' : 'unidad'}</p>
-                    </div>
+                </div> */}
+                  <div style={{display: 'flex' , justifyContent: 'space-between', alignItems: 'center',width: '100%'}}>
+                    <Link to={`/producto/${product.id}`}>
+                      <div style={{paddingRight: '10px', display: 'flex', flexDirection: 'column', gap: '10px', justifySelf: 'start'}}>
+                        <div style={{display: 'flex', gap: '10px'}}>
+                          <p style={{fontWeight: 'bold'}}>{product.name}</p>
+                          <p style={{fontWeight: 'bold'}}>${product.price * product.amount}</p>
+                        </div>
+                        <div style={{display: 'flex', gap: '10px'}}>
+                          <p style={{fontSize: '12px', color: "#656565"}}>{product.description}</p>
+                          <p style={{fontSize: '12px'}}>{product.amount} {(product.amount > 1) ? 'unidades' : 'unidad'}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  <div style={{display: 'flex', gap: 3, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                    <button style={{alignSelf: 'end'}}className="" onClick={()=>addItemToCart(product)}><img src="src/assets/icons/pngwing.com (21).png"></img></button>
+                    <button style={{alignSelf: 'end'}}className="" onClick={()=>removeOneItemFromCart(product)}><img src="src/assets/icons/pngwing.com (22).png"></img></button>
+                    <button style={{alignSelf: 'end'}}className="trash-button" onClick={()=>removeItemFromCart(product)}><img src="https://i.ibb.co/1ZKfz4X/trash-347.png"></img></button>
                   </div>
-                  <button style={{alignSelf: 'end'}}className="trash-button" onClick={()=>removeItemFromCart(product)}><img src="https://i.ibb.co/1ZKfz4X/trash-347.png"></img></button>
                 </div>
               </li>
               ))}
@@ -131,7 +166,7 @@ export default function Cart() {
             </div>
             <div style={{display: 'flex', gap: 10, alignSelf: 'end'}}>
             <Link to="/"><button style={{filter: 'invert(100%)'}}>Seguir comprando</button></Link>
-              <button onClick={emptyCart}>Confirmar compra</button>
+              <button onClick={() => alert('wiwawo todavia no se puede comprar chinchongbing')}>Confirmar compra</button>
             </div>
           </div>
         )}

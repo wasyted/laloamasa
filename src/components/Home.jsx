@@ -10,6 +10,7 @@ import '../App.css';
 
 export default function Home() {
   const [products, setProducts] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const fetchProducts = async () => {
@@ -18,26 +19,31 @@ export default function Home() {
       const data = await response.json();
       setProducts(data.products);
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error(error);
     }
-  }
+  };
 
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+    setSelectedCategory(null);
+  };
 
   return (
     <>
       <div style={{ backgroundColor: 'var(--gray)' }}>
         <Nav />
         <Header />
-        <SearchBar />
+        <SearchBar searchCallback={handleSearch} />
         <div style={{ margin: 'auto', maxWidth: '1280px' }}>
           <CategoriesSection setSelectedCategory={setSelectedCategory} />
         </div>
       </div>
       <div style={{ maxWidth: '1280px', margin: 'auto' }}>
-        <ProductsContainer products={products} selectedCategory={selectedCategory} />
+        <ProductsContainer products={products} selectedCategory={selectedCategory} searchTerm={searchTerm} />
       </div>
     </>
   );

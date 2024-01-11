@@ -13,7 +13,7 @@ export default function Product() {
   const urlParams = useParams();
   const [products, setProducts] = useState();
   const [product, setProduct] = useState();
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState('');
 

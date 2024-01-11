@@ -8,7 +8,7 @@ export default function Nav(){
         <Link to='/'>
           <h1 className={styles.logo}>laloamasa</h1>
         </Link>
-        <Link to='/cart'>
+        <Link to='/carrito'>
           <button className={styles.cartButton}></button>
         </Link>
       </nav>

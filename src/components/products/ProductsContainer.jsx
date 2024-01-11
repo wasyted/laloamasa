@@ -2,42 +2,57 @@ import { useEffect, useState } from 'react';
 import styles from '../styles/ProductsContainer.module.scss';
 import { Link } from 'react-router-dom';
 
-export default function ProductsContainer({ products, selectedCategory }) {
+export default function ProductsContainer({ products, selectedCategory, searchTerm }) {
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const [itemsPerPage, setItemsPerPage] = useState(9);
 
   useEffect(() => {
-    // Reset the displayed products when the selected category changes
+    // Reset the displayed products when the selected category or search term changes
     setDisplayedProducts([]);
-  }, [selectedCategory]);
+  }, [selectedCategory, searchTerm]);
 
   useEffect(() => {
-    // Update displayed products when products or itemsPerPage change
-    if (products && products.length > displayedProducts.length) {
-      const startIndex = 0;
-      const endIndex = startIndex + itemsPerPage;
-      console.log(endIndex)
-      const newProducts = selectedCategory
-        ? products.filter(product => product.category === selectedCategory).slice(startIndex, endIndex)
-        : products.slice(startIndex, endIndex);
+    // Update displayed products when products, selectedCategory, or itemsPerPage change
+    const startIndex = 0;
+    const endIndex = startIndex + itemsPerPage;
+    const newProducts = getNewProducts(startIndex, endIndex);
 
-      setDisplayedProducts(prevProducts => [...prevProducts, ...newProducts]);
+    setDisplayedProducts(newProducts);
+  }, [products, selectedCategory, itemsPerPage, searchTerm]);
+
+  const getNewProducts = (startIndex, endIndex) => {
+    let filteredProducts = products || []; // Handle null or undefined
+
+    if (selectedCategory) {
+      filteredProducts = filteredProducts.filter(product => product.category === selectedCategory);
     }
-  }, [products, selectedCategory, itemsPerPage]);
+
+    if (searchTerm) {
+      const searchTermLowerCase = searchTerm.toLowerCase();
+      filteredProducts = filteredProducts.filter(product =>
+        product.name.toLowerCase().includes(searchTermLowerCase)
+      );
+    }
+
+    return filteredProducts.slice(startIndex, endIndex);
+  };
 
   const loadMoreItems = () => {
-    setItemsPerPage(prevItemsPerPage => prevItemsPerPage + 9);
+    setItemsPerPage(prevItemsPerPage => prevItemsPerPage + 8);
   };
 
   return (
     <div>
-      <h1 className={styles.productsContainerHeader}>Productos / Todos</h1>
+      {(selectedCategory === null) ? <h1 className={styles.productsContainerHeader}>Productos / Todos</h1> : <h1 className={styles.productsContainerHeader}>Productos / {selectedCategory}</h1> }
       <div className={styles.productsContainer}>
         {displayedProducts.map((product) => (
-          <Link to={`/product/${product.id}`}>
-            <div key={product.id} className={styles.productContainer}>
-              <img src={product.image} alt="foto producto" />
+          <Link key={product.id}to={`/producto/${product.id}`}>
+            <div className={styles.productContainer}>
+              <div className={styles.productImageContainer}>
+                <img src={product.image} alt="" />
+              </div>
               <p>{product.name} <span className={styles.price}>${product.price}</span></p>
+              <button style={{justifySelf: 'flex-end'}}>Ver producto</button>
             </div>
           </Link>
         ))}

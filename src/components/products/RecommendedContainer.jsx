@@ -22,13 +22,16 @@ export default function RecommendedContainer(props){
   return(
     <div className={styles.recommendedProducts} style={{maxWidth: '1280px', margin: 'auto'}}>
       <h1 className={styles.productsContainerHeader}>Mirá tambien</h1>
-      <div className={styles.productsContainer}>
+      <div className={styles.recommendedProductsContainer}>
         {recommendedProducts && recommendedProducts.map((product) => {
           return (
-            <Link to={`/product/${product.id}`}>
-              <div key={uuidv4()} className={styles.productContainer}>
-                <img src={product.image} alt="foto producto" />
+            <Link key={uuidv4()} to={`/producto/${product.id}`}>
+              <div className={styles.recommendedProductContainer}>
+                <div className={styles.productImageContainer}>
+                  <img src={product.image} alt="foto producto" />
+                </div>
                 <p>{product.name} <span className={styles.price}>${product.price}</span></p>
+                <button>Ver producto</button>
               </div>
             </Link>
           )
