@@ -1,3 +1,25 @@
+.sortButtons{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  > button{
+    font-family: 'Josefin Sans';
+    padding: 6px;
+    background-color: #ffffff;
+    color: #151515;
+    border: 2px solid #151515;
+    border-radius: 3px;
+    max-width: 120px;
+    height: 30px;
+  }
+  .active{
+    background-color: #151515;
+    color: #fff;
+    border: none;
+  }
+}
+
 .productsContainerHeader{
   font-size: 20px;
   color: #151515;
@@ -84,7 +106,13 @@
   border: none;
   border-radius: 3px;
   align-self: self-end;
+  transition: 100ms ease;
 }
+
+.productContainer button:hover , .recommendedProductContainer button:hover{
+  background-color: #887754;
+}
+
 
 .loadMoreButton{
   margin-top: 10px;

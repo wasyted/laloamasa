@@ -27,6 +27,11 @@
   font-family: 'Josefin Sans';
   padding: 5px;
   text-align: center;
+  transition: 100ms ease;
+}
+
+.categoryCard:hover{
+  background-color: #e2e2e2;
 }
 
 .categoryCard > img{
