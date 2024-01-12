@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from './components/Home'
 import Product from './components/Product'
 import Cart from './components/Cart'
+import NotFound from "./components/NotFound";
 
 if(localStorage.getItem('Cart') === null){
   let cartList = [];
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/carrito",
     element: <Cart />,
-  },
+  },  
+  {
+    path: "*",
+    element: <NotFound />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
