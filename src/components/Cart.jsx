@@ -108,7 +108,7 @@ export default function Cart() {
     updateCart();
   }, []);
   return (
-    <>
+    <div style={{minHeight: '100dvh'}}>
       <Nav />
       <div className="cart">
         {cartProducts.length === 0 ? (
@@ -141,8 +141,8 @@ export default function Cart() {
                       </div>
                     </Link>
                   <div style={{display: 'flex', gap: 3, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                    <button style={{alignSelf: 'end'}}className="" onClick={()=>addItemToCart(product)}><img src="src/assets/icons/pngwing.com (21).png"></img></button>
-                    <button style={{alignSelf: 'end'}}className="" onClick={()=>removeOneItemFromCart(product)}><img src="src/assets/icons/pngwing.com (22).png"></img></button>
+                    <button style={{alignSelf: 'end'}}className="" onClick={()=>addItemToCart(product)}><img src="https://i.ibb.co/GVxh1SS/pngwing-com-21.png"></img></button>
+                    <button style={{alignSelf: 'end'}}className="" onClick={()=>removeOneItemFromCart(product)}><img src="https://i.ibb.co/y5whsXY/pngwing-com-22.png"></img></button>
                     <button style={{alignSelf: 'end'}}className="trash-button" onClick={()=>removeItemFromCart(product)}><img src="https://i.ibb.co/1ZKfz4X/trash-347.png"></img></button>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export default function Cart() {
               ))}
             </ul>
             <button style={{alignSelf: 'end', filter: 'invert(100%)'}} onClick={emptyCart}>Vaciar carrito</button>
-            <div style={{width:'100%',maxWidth: '600px', paddingTop: '10px', alignSelf: 'end'}}>
+            <div style={{width:'100%',maxWidth: '350px', paddingTop: '10px', alignSelf: 'end'}}>
               <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <p>Subtotal: </p>
                 <p>${subtotal}</p>
@@ -173,6 +173,6 @@ export default function Cart() {
       </div>
       {showNotification && <Notification message={notificationMessage} onClose={() => setShowNotification(false)} />}
       {products && <RecommendedContainer products={products} />}
-    </>
+    </div>
   );
 }

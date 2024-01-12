@@ -43,7 +43,11 @@
 
 .cart button img{
   filter: invert(100%);
-  max-width: 15px;
+  max-width: 10px;
+}
+
+.cart button:active img{
+  scale: 1.1;
 }
 
 .cart ul{
