@@ -8,8 +8,9 @@ const categories = [
   { name: "Sin TACC",  category: "sintacc", imageUrl: "https://i.ibb.co/8NCKvVL/icons8-ban-96.png" },
   { name: "Tortas",  category: "torta", imageUrl: "https://i.ibb.co/wgvBX6m/icons8-cake-100.png" },
   { name: "Salados",  category: "salado", imageUrl: "https://i.ibb.co/09MWN3x/icons8-cookies-100-1.png" },
-  { name: "Box de regalo",  category: "regalo", imageUrl: "https://i.ibb.co/ft0RzVb/icons8-gift-90.png" },
+  { name: "Box de regalo",  category: "box", imageUrl: "https://i.ibb.co/ft0RzVb/icons8-gift-90.png" },
   { name: "Fiestas",  category: "fiestas", imageUrl: "https://i.ibb.co/TgTmXkF/icons8-cupcake-66.png" },
+  { name: "Galletitas",  category: "galletitas", imageUrl: "" },
   { name: 'Ver Todo' ,  category: null, imageUrl: "" }
 ];
 

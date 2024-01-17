@@ -1,7 +1,7 @@
 // Notification.js
 
 import React from 'react';
-import './styles/Notification.scss'; // Add your notification styles
+import './styles/Notification.scss';
 
 const Notification = ({ message }) => {
   return (

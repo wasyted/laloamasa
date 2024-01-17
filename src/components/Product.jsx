@@ -54,6 +54,7 @@ export default function Product() {
     }
 
     localStorage.setItem("Cart", JSON.stringify(existingCart));
+    setAmount(1)
   }
 
   function handleIncrease() {

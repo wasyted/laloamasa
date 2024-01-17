@@ -80,7 +80,7 @@ export default function ProductsContainer({ products, selectedCategory, searchTe
   };
 
   return (
-    <div>
+    <div style={{maxWidth: 1280, margin: 'auto'}}>
       {(selectedCategory === null) ? <h1 className={styles.productsContainerHeader}>Productos / Todos</h1> : <h1 className={styles.productsContainerHeader}>Productos / {selectedCategory}</h1> }
       <div className={styles.sortButtons}>
       <p style={{paddingRight: '10px'}}>Ordernar: </p>

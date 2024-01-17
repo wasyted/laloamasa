@@ -41,9 +41,9 @@ export default function Home() {
         <div style={{ margin: 'auto', maxWidth: '1280px' }}>
           <CategoriesSection setSelectedCategory={setSelectedCategory} />
         </div>
-      </div>
-      <div style={{ maxWidth: '1280px', margin: 'auto' }}>
-        <ProductsContainer products={products} selectedCategory={selectedCategory} searchTerm={searchTerm} />
+        <div style={{ backgroundColor: '#fff'}}>
+          <ProductsContainer products={products} selectedCategory={selectedCategory} searchTerm={searchTerm} />
+        </div>
       </div>
     </>
   );

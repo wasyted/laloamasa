@@ -35,6 +35,13 @@ nav{
   border: none;
 }
 
+.cartContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans';
+}
+
 .header{
   min-height: max-content;
   max-height: 200px;

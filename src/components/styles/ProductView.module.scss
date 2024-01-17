@@ -19,10 +19,16 @@
 
 .infoContainer{
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  padding-top: 10px;
-  align-items: end;
+  align-items: start;
   justify-content: start;
+  h2{
+    color: #151515;
+  }
+  p{
+    color: #353535;
+  }
 }
 
 .buyContainer{
@@ -31,6 +37,7 @@
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
+  font-family: 'Josefin Sans';
 }
 
 .buyContainer > button{
@@ -44,4 +51,95 @@
 
 .productView > img{
   max-width: 300px;
+}
+
+.flavorDropdown{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans' !important;
+  color: #353535;
+  > select{
+    border: 2px solid #151515;
+    padding: 3px;
+  }
+}
+
+.productViewContainer {
+  padding: 10px;
+  margin: auto;
+  max-width: 1024px;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: 80px 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "side-gallery main-view product-info-container";
+  img{
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 5px;
+  }
+}
+
+.sideGallery {
+  padding: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px 80px 80px 80px 80px;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    ".";
+  grid-area: side-gallery;
+  > div{
+    border-radius: 5px;
+    background-color: var(--lightgray);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    > img{
+      max-width: 100%;
+    }
+  }
+}
+
+.mainView { 
+  padding: 10px;
+  grid-area: main-view; 
+}
+
+.productInfoContainer { 
+  padding: 10px;
+  grid-area: product-info-container; 
+}
+
+@media (max-width: 768px){
+  .productViewContainer {
+    display: grid;
+    grid-template-columns: 80px 1fr; 
+    grid-template-rows: 1fr 0.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "sideGallery mainView"
+      "productInfoContainer productInfoContainer"; 
+  }
+  .mainView { 
+    align-self: center;
+    grid-area: mainView; }
+  .productInfoContainer { grid-area: productInfoContainer; }
+  .sideGallery { grid-area: sideGallery; }
 }
