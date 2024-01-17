@@ -15,7 +15,7 @@ export default function Nav(){
         <Link to='/carrito'>
           <div className={styles.cartContainer}>
             {localStorage.getItem('Cart') && (
-              <span className={styles.cartTotal}>{`$${calculateTotalAmount().toFixed(2)}`}</span>
+              <span className={styles.cartTotal}>{`${calculateTotalAmount().toLocaleString("es-AR", { style: "currency", currency: "ARS" })}`}</span>
             )}
             <button className={styles.cartButton}></button>
           </div>

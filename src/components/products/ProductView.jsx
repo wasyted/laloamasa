@@ -36,7 +36,7 @@ export default function ProductView(props) {
           <div className={styles.productView}>
             <h1>{props.name}</h1>
             <div className={styles.infoContainer}>
-              <h2>${props.price}</h2>
+              <h2>{props.price.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</h2>
               <p>{props.description}</p>
             </div>
             <div className={styles.flavorDropdown}>

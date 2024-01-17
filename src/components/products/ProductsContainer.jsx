@@ -104,7 +104,7 @@ export default function ProductsContainer({ products, selectedCategory, searchTe
               <div className={styles.productImageContainer}>
                 <img src={product.image} alt="" />
               </div>
-              <p>{product.name} <span className={styles.price}>${product.price}</span></p>
+              <p>{product.name} <span className={styles.price}>{product.price.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</span></p>
               <button style={{ justifySelf: 'flex-end' }}>Ver producto</button>
             </div>
           </Link>
