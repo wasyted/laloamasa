@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import Nav from './nav/Nav';
 import Header from './nav/Header';
+import Banner from './nav/Banner';
+import Nav from './nav/Nav';
 import SearchBar from './inputs/SearchBar';
 import CategoriesSection from './categories/CategoriesSection';
 import ProductsContainer from './products/ProductsContainer';
@@ -35,8 +36,9 @@ export default function Home() {
   return (
     <>
       <div style={{ backgroundColor: 'var(--gray)' }}>
-        <Nav />
         <Header />
+        <Banner />
+        <Nav />
         <SearchBar searchCallback={handleSearch} />
         <div style={{ margin: 'auto', maxWidth: '1280px' }}>
           <CategoriesSection setSelectedCategory={setSelectedCategory} />

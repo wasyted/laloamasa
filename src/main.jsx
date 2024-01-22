@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Product from './components/Product'
 import Cart from './components/Cart'
 import NotFound from "./components/NotFound";
+import SinTacc from "./components/SinTacc";
 
 if(localStorage.getItem('Cart') === null){
   let cartList = [];
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/carrito",
     element: <Cart />,
+  },
+  {
+    path: "/sintacc",
+    element: <SinTacc />,
   },  
   {
     path: "*",

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Notification.scss';
 import styles from '../styles/ProductView.module.scss';
 
@@ -34,6 +35,7 @@ export default function ProductView(props) {
         </div>
         <div className={styles.productInfoContainer}>
           <div className={styles.productView}>
+            <h4><Link to='/'>Inicio</Link> / <Link to='/'>Productos</Link> / {props.name}</h4>
             <h1>{props.name}</h1>
             <div className={styles.infoContainer}>
               <h2>{props.price.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</h2>

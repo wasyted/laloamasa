@@ -1,0 +1,36 @@
+.homeBannerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-family: 'Josefin Sans' !important;
+    > li {
+      padding: 6px;
+      border-bottom: #656565 1px solid;
+      transition: 200ms ease;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      > select{
+        border: none;
+        background: none;
+        font-family: inherit;
+        font-size: inherit;
+      }
+      > select::after{
+        font-size: inherit;
+      }
+    }
+    > li:hover{
+      background-color: #e2e2e2;
+    }
+    
+  }
+}

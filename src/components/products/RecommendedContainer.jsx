@@ -21,7 +21,7 @@ export default function RecommendedContainer(props){
 
   return(
     <div className={styles.recommendedProducts} style={{maxWidth: '1280px', margin: 'auto'}}>
-      <h1 className={styles.productsContainerHeader}>Mirá tambien</h1>
+      <h1 className={styles.productsContainerHeader}>Mirá también</h1>
       <div className={styles.recommendedProductsContainer}>
         {recommendedProducts && recommendedProducts.map((product) => {
           return (

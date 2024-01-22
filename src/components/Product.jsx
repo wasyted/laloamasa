@@ -1,7 +1,7 @@
 import Notification from './Notification';
 import ProductView from './products/ProductView';
 import RecommendedContainer from './products/RecommendedContainer';
-import Nav from './nav/Nav';
+import Header from './nav/Header';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../components/styles/Notification.scss'
@@ -76,7 +76,7 @@ export default function Product() {
 
   return (
     <>
-      <Nav />
+      <Header />
       {product && (
         <ProductView
           id={product.id}

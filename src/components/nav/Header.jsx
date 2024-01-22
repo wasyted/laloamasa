@@ -1,42 +1,37 @@
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from '../styles/Header.module.scss';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import SideMenu from './SideMenu';
+const calculateTotalAmount = () => {
+  const cart = JSON.parse(localStorage.getItem('Cart')) || { cartList: [] };
+  return cart.cartList.reduce((total, item) => total + item.amount * item.price, 0);
+};
 
 export default function Header(){
-  return(
-    <div>
-      <Carousel 
-        autoPlay={true} 
-        infiniteLoop={true} 
-        showArrows={false} 
-        showStatus={false} 
-        showThumbs={false} 
-        emulateTouch={true} 
-        swipeable={true}
-        interval={10000}>
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
-        <div className={styles.header}>
-          <div className={styles.carouselOverlay}>
-            <p>
-              Soy Lore
-            </p>
-            <h1>Estoy amasando con amor</h1>
+  const toggleSideMenu = () => {
+    setIsSideMenuOpen(!isSideMenuOpen);
+  };
+  return(
+    <>
+      <nav className={styles.navContainer}>
+        <button className={styles.sideMenuButton} onClick={toggleSideMenu}><img src="src/assets/icons/kisspng-hamburger-button-menu-computer-icons-5aec355f4b22d7.2596969515254295993078.png" alt="" /></button>
+        <Link to='/'>
+          <h1 className={styles.logo}>#laloamasa</h1>
+        </Link>
+        <Link to='/carrito'>
+          <div className={styles.cartContainer}>
+            {localStorage.getItem('Cart') && (
+              <span className={styles.cartTotal}>
+                {`${calculateTotalAmount().toLocaleString("es-AR", { style: "currency", currency: "ARS" })}`}
+              </span>
+            )}
+            <button className={styles.cartButton}></button>
           </div>
-          <img src="https://i.ibb.co/bmckCYR/pexels-life-of-pix-9095.jpg" />
-        </div>
-        <div className={styles.header}>
-          <div className={styles.carouselOverlay}>
-            <h1>¿Ya probaste el budín de chocolate?</h1>
-          </div>
-          <img src="https://i.ibb.co/C5jp1HH/pexels-lucie-liz-3256809.jpg" />
-        </div>
-        <div className={styles.header}>
-          <div className={styles.carouselOverlay}>
-            <h1>Hacemos envíos, ¡Consultá disponibilidad!</h1>
-          </div>
-          <img src="https://i.ibb.co/PGjf2S2/pexels-j-shoots-230743.jpg" />
-        </div>
-      </Carousel>
-    </div>
+        </Link>
+      </nav>
+      <SideMenu onClose={toggleSideMenu} isOpen={isSideMenuOpen} />
+    </>
   )
 }

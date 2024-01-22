@@ -69,8 +69,8 @@
   align-items: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 10px;
+  gap: 5px;
+  padding: 5px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -126,12 +126,18 @@
   border-radius: 3px;
 }
 
+@media (max-width: 350px) {
+  .recommendedProducts , .productsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 768px){
   .productsContainer{
-    padding: 50px;
+    padding: 20px;
     padding-top: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 20px;
   }
   .recommendedProductsContainer{
     grid-template-columns: 1fr 1fr 1fr 1fr;

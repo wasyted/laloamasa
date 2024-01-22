@@ -20,8 +20,8 @@ nav{
 }
 
 .logo{
-  color: $black;
-  font-family: 'Cookie';
+  font-family: 'Grand Hotel';
+  font-weight: 400;
 }
 
 .cartButton{
@@ -33,20 +33,40 @@ nav{
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+
 }
 
 .cartContainer{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
   font-family: 'Josefin Sans';
+  gap: 5px;
+  flex: 1;
 }
 
-.header{
-  min-height: max-content;
-  max-height: 200px;
+nav>a , nav>button{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+nav{
+  >a{
+    justify-content: center;
+  }
+  >button:first-of-type{
+    justify-content: start;
+  }
+}
+
+.banner{
+  height: 230px;
   position: relative;
   top: 0;
+  > img {
+    object-fit: fill;
+  }
 }
 
 .carouselOverlay{
@@ -64,6 +84,19 @@ nav{
   background-color: #0000004d;
 }
 
+.logoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  z-index: 3;
+  position: relative;
+  img{
+    max-width: 100%;
+  }
+}
+
 .carouselOverlay > h1{
   font-size: 24px;
   color: $white;
@@ -77,4 +110,15 @@ nav{
   text-align: justify;
   max-width: 45ch;
   color: $white;
+}
+
+.sideMenuButton{
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  img{
+    width: 25px;
+  }
 }

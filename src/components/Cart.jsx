@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Nav from "./nav/Nav";
+import Header from "./nav/Header";
 import RecommendedContainer from "./products/RecommendedContainer";
 import Notification from './Notification';
 import './styles/Cart.scss';
@@ -109,13 +109,13 @@ export default function Cart() {
   }, []);
   return (
     <div style={{minHeight: '100dvh'}}>
-      <Nav />
+      <Header />
       <div className="cart">
         {cartProducts.length === 0 ? (
-          <div style={{display: 'flex' , justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: 20}}>
+          <div style={{display: 'flex' , justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: 20, paddingTop: '20px'}}>
             <h1>Ups..</h1>
             <h2>Tu carrito está vacío.</h2>
-            <p>Hacé click o tocá acá para volver a la página de productos y añadirlos al carrito.</p>
+            <Link to="/"><p>Hacé click o tocá acá para volver a la página de productos y añadirlos al carrito.</p></Link>
             <Link to="/"><button style={{filter: 'invert(100%)'}} onClick={emptyCart}>Seguir comprando</button></Link>
           </div>
         ) : (
@@ -166,7 +166,9 @@ export default function Cart() {
             </div>
             <div style={{display: 'flex', gap: 10, alignSelf: 'end'}}>
             <Link to="/"><button style={{filter: 'invert(100%)'}}>Seguir comprando</button></Link>
-              <button onClick={() => alert('wiwawo todavia no se puede comprar chinchongbing')}>Confirmar compra</button>
+              <Link to='https://api.whatsapp.com/send?phone=+541135628327&text=Hola+Lorena%21+Soy+%2Ausername%2A+y+quiero+encargarte%3A%0A%0A%2A-1+Budin+XL%2A+_%28%241.300%2C00%29_%0A%2A-2+Docena+de+Pizzetas%2A+_%28%241.200%2C00%29_%0A%2A-1+Docena+de+Figazzitas+de+Manteca%2A+_%28%241.500%2C00%29_%0A%0A_%2B%241.000%2C00+de+env%C3%ADo_%0A%0APor+un+total+de%3A%0A%2A%245.500%2C00%2A%0A%0AMi+direcci%C3%B3n+es%3A%0A%2ACalle+855+N%C2%B01186%2C+Solano%2A%0A%0APago+con%3A%0A%2ATransferencia+por+MercadoPago%2A%0A%0AGracias%21'>
+                <button>Confirmar compra</button>
+              </Link>
             </div>
           </div>
         )}
