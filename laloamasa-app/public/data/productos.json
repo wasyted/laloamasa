@@ -1,0 +1,67 @@
+{
+  "productos": [
+    {
+      "id": 1, 
+      "nombre": "Budin Chico",
+      "precio": 1900,
+      "descripcion": "Budin de 15cm, variedad de sabores", 
+      "imagen": [
+        "https://lh3.googleusercontent.com/pw/ABLVV86smC3H96kqA2xCMPGOkk41CAzwCYvfWPrLCQmg_pIOUWoPTWvtsKNmvlAPW6QV-KDZ3ZdnDSU6imZEEeso9KCttWZiFEwThxj4GN_5bdP3lRjaZLI5yKWigAC5i1yzLK7hF8_R2asl8zXmt7UMFB6-pw=w487-h649-s-no-gm?authuser=0",
+        "https://lh3.googleusercontent.com/pw/ABLVV848RTvPxO3PYQ6MtkWO2tFFAZFNw9hQQUvtbFpZWJLKsqelLMehNVTq6JjYHbKXpytqqZwuQ8Ef8Qbiy0z-mbQstbxVYq9NV6-Ml1Y7iSK3cX0x4vXNOU_X_ePq1WV_ZdSCBasotBajNnAABszOkiQaiw=w487-h649-s-no-gm?authuser=0"
+      ], 
+      "categoria": "Budin",
+      "sinGluten": true,
+      "sinAzucar": true,
+      "sinSal": true,
+      "vegano": true,
+      "sabores": [
+        "Vainilla",
+        "Naranja",
+        "Limón",
+        "Chocolate",
+        "Marmolado",
+        "Coco"
+      ]
+    },
+    {
+      "id": 2, 
+      "nombre": "Budin Grande",
+      "precio": 3000,
+      "descripcion": "Budin de 30cm, variedad de sabores", 
+      "imagen": [
+        "https://lh3.googleusercontent.com/pw/ABLVV848RTvPxO3PYQ6MtkWO2tFFAZFNw9hQQUvtbFpZWJLKsqelLMehNVTq6JjYHbKXpytqqZwuQ8Ef8Qbiy0z-mbQstbxVYq9NV6-Ml1Y7iSK3cX0x4vXNOU_X_ePq1WV_ZdSCBasotBajNnAABszOkiQaiw=w487-h649-s-no-gm?authuser=0",
+        "https://lh3.googleusercontent.com/pw/ABLVV86smC3H96kqA2xCMPGOkk41CAzwCYvfWPrLCQmg_pIOUWoPTWvtsKNmvlAPW6QV-KDZ3ZdnDSU6imZEEeso9KCttWZiFEwThxj4GN_5bdP3lRjaZLI5yKWigAC5i1yzLK7hF8_R2asl8zXmt7UMFB6-pw=w487-h649-s-no-gm?authuser=0"
+      ], 
+      "categoria": "Budin",
+      "sinGluten": true,
+      "sinAzucar": true,
+      "sinSal": true,
+      "vegano": true,
+      "sabores": [
+        "Vainilla",
+        "Naranja",
+        "Limón",
+        "Chocolate",
+        "Marmolado",
+        "Coco"
+      ]
+    },
+    {
+      "id": 3, 
+      "nombre": "Pancitos",
+      "precio": 2000,
+      "descripcion": "Pan casero para sandwich", 
+      "imagen": [
+        "https://scontent.cdninstagram.com/v/t51.29350-15/350453654_157292200523359_2130887842789794179_n.webp?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEzNTAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=107&_nc_ohc=VuShGhzfeOEAX-TNf3V&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzExMzY3MTE3MTQzNDc2OTQ3MQ%3D%3D.2-ccb7-5&oh=00_AfCpg4-X5DzchQvNcJZCbs-0xpiUWbTln3fCO27f3oDuXw&oe=65EAB012&_nc_sid=10d13b"      ], 
+      "categoria": "Budin",
+      "sinGluten": true,
+      "sinAzucar": true,
+      "sinSal": true,
+      "vegano": true,
+      "sabores": [
+        "Integral",
+        "Blanco"
+      ]
+    }
+  ]
+}

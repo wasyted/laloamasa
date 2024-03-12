@@ -1,0 +1,14 @@
+{
+  "categorias": [
+    {
+      "id": 1, 
+      "nombre": "Budin",
+      "imagen": "https://ipfs.filebase.io/ipfs/QmWyu3YCt71duun8B7nW4gmYeFJFXTUeYCHinKVvgLiydg/QmP2ken4PEM8acTAL15t9fvYL4pgRvoDNkAcxPrSwK9F8j"
+    },
+    {
+      "id": 2, 
+      "nombre": "Pan",
+      "imagen": "https://ipfs.filebase.io/ipfs/QmRxLvbAfHSd6zG8M6gzZMErsdrN5WpCt2BfiQHSAzoM9s/icons8-bread-100.png"
+    }
+  ]
+}

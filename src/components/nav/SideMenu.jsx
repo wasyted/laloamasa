@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SideMenu.scss';  // Import the corresponding SCSS file
+import './SideMenu.scss';
 
 const SideMenu = ({ isOpen, onClose }) => {
   return (
